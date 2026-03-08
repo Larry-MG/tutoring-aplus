@@ -53,15 +53,6 @@ export default function Footer() {
                   <span className="text-chalk">Oak Park / Agoura Hills, CA</span>
                 </li>
                 <li>
-                  <span className="block text-xs uppercase tracking-wider text-sage mb-0.5">Phone</span>
-                  <a
-                    href="tel:+16099378111"
-                    className="text-chalk transition hover:text-sage"
-                  >
-                    +1 (609) 937-8111
-                  </a>
-                </li>
-                <li>
                   <span className="block text-xs uppercase tracking-wider text-sage mb-0.5">Email</span>
                   <a
                     href="mailto:abir.elshimy@gmail.com"
