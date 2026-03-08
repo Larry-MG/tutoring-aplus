@@ -1,0 +1,57 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 5rem;
+  overflow: hidden;
+  background-color: #1e2a2a;
+}
+
+.ruledLines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 39px,
+    rgba(255, 255, 255, 0.03) 39px,
+    rgba(255, 255, 255, 0.03) 40px
+  );
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 70% 40%,
+    rgba(72, 107, 96, 0.3) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.chalkUnderline {
+  position: relative;
+  display: inline;
+}
+
+.chalkUnderline::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 2px;
+  height: 8px;
+  background: rgba(232, 167, 89, 0.35);
+  transform: rotate(-0.5deg);
+  border-radius: 2px;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 0 3rem;
+  }
+}

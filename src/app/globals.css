@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-board: #1e2a2a;
+  --color-board-light: #243333;
+  --color-chalk: #e8e4dc;
+  --color-chalk-bright: #f0ece4;
+  --color-chalk-dim: rgba(228, 224, 216, 0.65);
+  --color-chalk-faint: rgba(228, 224, 216, 0.08);
+  --color-sage: #8fc0a9;
+  --color-sage-dim: rgba(143, 192, 169, 0.15);
+  --color-amber: #e8a759;
+  --color-amber-hover: #f0b76a;
+  --color-amber-glow: rgba(232, 167, 89, 0.3);
+  --color-amber-dim: rgba(232, 167, 89, 0.15);
+  --font-display: 'Libre Baskerville', Georgia, serif;
+  --font-chalk: 'Caveat', cursive;
+  --font-body: 'Libre Baskerville', Georgia, serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-chalk);
+  background: var(--color-board);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
