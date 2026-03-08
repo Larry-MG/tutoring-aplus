@@ -55,28 +55,17 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Top bar ── */}
+      {/* ── Main nav bar ── */}
       <nav
         ref={panelRef}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? 'py-0' : 'py-2'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          backgroundColor: scrolled || mobileOpen
-            ? 'rgba(30, 42, 42, 0.95)'
-            : 'transparent',
-          backdropFilter: scrolled || mobileOpen ? 'blur(16px) saturate(1.5)' : 'none',
-          WebkitBackdropFilter: scrolled || mobileOpen ? 'blur(16px) saturate(1.5)' : 'none',
-          borderBottom:
-            scrolled || mobileOpen
-              ? '1px solid rgba(143, 192, 169, 0.12)'
-              : '1px solid transparent',
-          boxShadow: scrolled
-            ? '0 4px 30px rgba(0, 0, 0, 0.3)'
-            : 'none',
+          background: 'rgba(30, 42, 42, 0.97)',
+          borderBottom: '1px solid rgba(143, 192, 169, 0.12)',
+          boxShadow: '0 4px 24px rgba(0,0,0,0.3)',
         }}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 h-16">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
           {/* Logo */}
           <a
             href="#home"
@@ -84,19 +73,19 @@ export default function Navbar() {
             className="group flex items-center gap-3"
           >
             <span
-              className="relative flex h-10 w-10 items-center justify-center rounded-xl font-chalk text-xl font-bold text-board transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg"
+              className="flex h-10 w-10 items-center justify-center rounded-lg font-chalk text-lg font-bold text-board transition-all duration-300 group-hover:scale-105"
               style={{
-                background: 'linear-gradient(135deg, #e8a759 0%, #f0b76a 100%)',
-                boxShadow: '0 2px 12px rgba(232, 167, 89, 0.3)',
+                background: 'linear-gradient(135deg, #e8a759, #f0b76a)',
+                boxShadow: '0 2px 8px rgba(232,167,89,0.25)',
               }}
             >
               A+
             </span>
             <div className="flex flex-col">
-              <span className="font-display text-lg font-semibold leading-tight text-chalk-bright tracking-wide transition-colors duration-300 group-hover:text-amber">
+              <span className="font-display text-lg font-semibold leading-tight text-chalk-bright transition-colors duration-300 group-hover:text-amber">
                 Tutoring A+
               </span>
-              <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-sage" style={{ opacity: 0.7 }}>
+              <span className="text-[10px] uppercase tracking-[0.15em] text-sage" style={{ opacity: 0.6 }}>
                 Math & Physics
               </span>
             </div>
@@ -112,37 +101,25 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => navigate(e, link.href)}
-                  className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
-                    isActive
-                      ? 'text-amber'
-                      : 'text-chalk-dim hover:text-chalk-bright'
+                  className={`relative px-5 py-2 text-sm font-medium transition-all duration-300 ${
+                    isActive ? 'text-chalk-bright' : 'text-chalk-dim hover:text-chalk-bright'
                   }`}
-                  style={{
-                    backgroundColor: isActive ? 'rgba(232, 167, 89, 0.08)' : 'transparent',
-                  }}
                 >
                   {link.label}
                   {isActive && (
-                    <span
-                      className="absolute bottom-0.5 left-1/2 h-[2px] w-5 -translate-x-1/2 rounded-full"
-                      style={{
-                        background: 'linear-gradient(90deg, transparent, #e8a759, transparent)',
-                      }}
-                    />
+                    <span className="absolute bottom-0 left-1/2 h-[2px] w-6 -translate-x-1/2 rounded-full bg-amber" />
                   )}
                 </a>
               );
             })}
-
-            <div className="mx-3 h-5 w-px" style={{ backgroundColor: 'rgba(228, 224, 216, 0.1)' }} />
-
+            <div className="ml-3 h-5 w-px" style={{ backgroundColor: 'rgba(228,224,216,0.1)' }} />
             <a
               href="#contact"
               onClick={(e) => navigate(e, '#contact')}
-              className="group relative overflow-hidden rounded-lg px-5 py-2.5 text-sm font-bold text-board transition-all duration-300 hover:shadow-lg hover:scale-[1.03] active:scale-[0.98]"
+              className="group relative ml-4 overflow-hidden rounded-lg px-5 py-2.5 text-sm font-bold text-board transition-all duration-300 hover:shadow-lg hover:scale-[1.03] active:scale-[0.98]"
               style={{
-                background: 'linear-gradient(135deg, #e8a759 0%, #f0b76a 100%)',
-                boxShadow: '0 2px 12px rgba(232, 167, 89, 0.25)',
+                background: 'linear-gradient(135deg, #e8a759, #f0b76a)',
+                boxShadow: '0 2px 12px rgba(232,167,89,0.25)',
               }}
             >
               <span className="relative z-10">Book a Session</span>

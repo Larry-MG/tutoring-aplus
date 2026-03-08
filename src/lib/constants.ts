@@ -46,7 +46,6 @@ export const SUBJECTS = [
 export const CONTACT_INFO = {
   location: 'Oak Park / Agoura Hills, CA',
   locationNote: 'In-person & online available',
-  phone: '+1 (609) 937-8111',
   email: 'abir.elshimy@gmail.com',
   hours: 'Mon — Sat, flexible hours',
   hoursNote: 'Evenings & weekends welcome',
