@@ -20,9 +20,9 @@ const cards = [
       "Newton's laws, circuits, magnetism — concepts that click",
   },
   {
-    label: 'Rate',
-    title: '$50 / hour',
-    description: 'All subjects, all levels, one simple rate',
+    label: 'Your Tutor',
+    title: '15+ Years Experience',
+    description: 'M.Sc. Physics · NJ Certified · Taught in 3 countries',
   },
 ];
 
@@ -92,7 +92,8 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
             >
-              Patient, personalized 1-on-1 tutoring for high school students in
+              With over 15 years of teaching experience, I provide patient,
+              personalized 1-on-1 tutoring for high school students in
               Oak Park &amp; Agoura Hills — and anywhere online.
             </motion.p>
 

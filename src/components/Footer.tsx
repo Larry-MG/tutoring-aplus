@@ -31,7 +31,7 @@ export default function Footer() {
             <div className="space-y-4">
               <h3 className="font-bold text-chalk-bright">Quick Links</h3>
               <ul className="space-y-2">
-                {['Home', 'Services', 'Pricing', 'Contact'].map((link) => (
+                {['Home', 'About', 'Services', 'Contact'].map((link) => (
                   <li key={link}>
                     <a
                       href={`#${link.toLowerCase()}`}
@@ -53,12 +53,21 @@ export default function Footer() {
                   <span className="text-chalk">Oak Park / Agoura Hills, CA</span>
                 </li>
                 <li>
-                  <span className="block text-xs uppercase tracking-wider text-sage mb-0.5">Email</span>
+                  <span className="block text-xs uppercase tracking-wider text-sage mb-0.5">Phone</span>
                   <a
-                    href="mailto:info@tutoringaplus.com"
+                    href="tel:+16099378111"
                     className="text-chalk transition hover:text-sage"
                   >
-                    info@tutoringaplus.com
+                    +1 (609) 937-8111
+                  </a>
+                </li>
+                <li>
+                  <span className="block text-xs uppercase tracking-wider text-sage mb-0.5">Email</span>
+                  <a
+                    href="mailto:abir.elshimy@gmail.com"
+                    className="text-chalk transition hover:text-sage"
+                  >
+                    abir.elshimy@gmail.com
                   </a>
                 </li>
                 <li>

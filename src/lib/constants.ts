@@ -43,19 +43,11 @@ export const SUBJECTS = [
   },
 ] as const;
 
-export const PRICING_FEATURES = [
-  'Personalized 1-on-1 sessions',
-  'Customized study plans',
-  'Homework & assignment help',
-  'Test & exam preparation',
-  'Online or in-person flexibility',
-  'Progress tracking & feedback',
-] as const;
-
 export const CONTACT_INFO = {
   location: 'Oak Park / Agoura Hills, CA',
   locationNote: 'In-person & online available',
-  email: 'info@tutoringaplus.com',
+  phone: '+1 (609) 937-8111',
+  email: 'abir.elshimy@gmail.com',
   hours: 'Mon — Sat, flexible hours',
   hoursNote: 'Evenings & weekends welcome',
 } as const;
@@ -72,8 +64,8 @@ export const SUBJECT_OPTIONS = [
 
 export const NAV_LINKS = [
   { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
-  { href: '#pricing', label: 'Pricing' },
 ] as const;
 
 export const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
